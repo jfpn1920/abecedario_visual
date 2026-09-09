@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111111;
+}
+/*------------------------------*/
+/*--|estilo_abecedario_visual|--*/
+/*------------------------------*/
+.encabezado {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+.encabezado h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+.encabezado p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #222222;
+}
+/*----------------------------*/
+/*--|estilo_tarjetas_visual|--*/
+/*----------------------------*/
+.abecedario-visual {
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px 11px;
+}
+.tarjeta-abeja,
+.tarjeta-ballena,
+.tarjeta-casa,
+.tarjeta-delfin,
+.tarjeta-elefante,
+.tarjeta-foca,
+.tarjeta-gato,
+.tarjeta-helicoptero,
+.tarjeta-isla,
+.tarjeta-jaguar,
+.tarjeta-koala,
+.tarjeta-leon,
+.tarjeta-mula,
+.tarjeta-nube,
+.tarjeta-nandu,
+.tarjeta-oso,
+.tarjeta-pato,
+.tarjeta-queso,
+.tarjeta-raton,
+.tarjeta-sol,
+.tarjeta-telefono,
+.tarjeta-uva,
+.tarjeta-vaca,
+.tarjeta-sandia,
+.tarjeta-xilofono,
+.tarjeta-yoyo,
+.tarjeta-zapato {
+    width: 100%;
+    height: 241px;
+    background-color: #ffffff;
+    border: 1px solid #777777;
+    display: flex;
+    flex-direction: column;
+}
+.letra-abeja,
+.letra-ballena,
+.letra-casa,
+.letra-delfin,
+.letra-elefante,
+.letra-foca,
+.letra-gato,
+.letra-helicoptero,
+.letra-isla,
+.letra-jaguar,
+.letra-koala,
+.letra-leon,
+.letra-mula,
+.letra-nube,
+.letra-nandu,
+.letra-oso,
+.letra-pato,
+.letra-queso,
+.letra-raton,
+.letra-sol,
+.letra-telefono,
+.letra-uva,
+.letra-vaca,
+.letra-sandia,
+.letra-xilofono,
+.letra-yoyo,
+.letra-zapato {
+    width: 100%;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        to bottom,
+        #9da4af,
+        #303640
+    );
+    color: #000000;
+    font-size: 27px;
+    font-weight: bold;
+}
+.contenido-abeja,
+.contenido-ballena,
+.contenido-casa,
+.contenido-delfin,
+.contenido-elefante,
+.contenido-foca,
+.contenido-gato,
+.contenido-helicoptero,
+.contenido-isla,
+.contenido-jaguar,
+.contenido-koala,
+.contenido-leon,
+.contenido-mula,
+.contenido-nube,
+.contenido-nandu,
+.contenido-oso,
+.contenido-pato,
+.contenido-queso,
+.contenido-raton,
+.contenido-sol,
+.contenido-telefono,
+.contenido-uva,
+.contenido-vaca,
+.contenido-sandia,
+.contenido-xilofono,
+.contenido-yoyo,
+.contenido-zapato {
+    width: 100%;
+    height: 157px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icono-abeja,
+.icono-ballena,
+.icono-casa,
+.icono-delfin,
+.icono-elefante,
+.icono-foca,
+.icono-gato,
+.icono-helicoptero,
+.icono-isla,
+.icono-jaguar,
+.icono-koala,
+.icono-leon,
+.icono-mula,
+.icono-nube,
+.icono-nandu,
+.icono-oso,
+.icono-pato,
+.icono-queso,
+.icono-raton,
+.icono-sol,
+.icono-telefono,
+.icono-uva,
+.icono-vaca,
+.icono-sandia,
+.icono-xilofono,
+.icono-yoyo,
+.icono-zapato {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icono-abeja i,
+.icono-ballena i,
+.icono-casa i,
+.icono-delfin i,
+.icono-elefante i,
+.icono-foca i,
+.icono-gato i,
+.icono-helicoptero i,
+.icono-isla i,
+.icono-jaguar i,
+.icono-koala i,
+.icono-leon i,
+.icono-mula i,
+.icono-nube i,
+.icono-nandu i,
+.icono-oso i,
+.icono-pato i,
+.icono-queso i,
+.icono-raton i,
+.icono-sol i,
+.icono-telefono i,
+.icono-uva i,
+.icono-vaca i,
+.icono-sandia i,
+.icono-xilofono i,
+.icono-yoyo i,
+.icono-zapato i {
+    font-size: 65px;
+    color: #000000;
+}
+.nombre-abeja,
+.nombre-ballena,
+.nombre-casa,
+.nombre-delfin,
+.nombre-elefante,
+.nombre-foca,
+.nombre-gato,
+.nombre-helicoptero,
+.nombre-isla,
+.nombre-jaguar,
+.nombre-koala,
+.nombre-leon,
+.nombre-mula,
+.nombre-nube,
+.nombre-nandu,
+.nombre-oso,
+.nombre-pato,
+.nombre-queso,
+.nombre-raton,
+.nombre-sol,
+.nombre-telefono,
+.nombre-uva,
+.nombre-vaca,
+.nombre-sandia,
+.nombre-xilofono,
+.nombre-yoyo,
+.nombre-zapato {
+    margin-top: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+.boton-abeja,
+.boton-ballena,
+.boton-casa,
+.boton-delfin,
+.boton-elefante,
+.boton-foca,
+.boton-gato,
+.boton-helicoptero,
+.boton-isla,
+.boton-jaguar,
+.boton-koala,
+.boton-leon,
+.boton-mula,
+.boton-nube,
+.boton-nandu,
+.boton-oso,
+.boton-pato,
+.boton-queso,
+.boton-raton,
+.boton-sol,
+.boton-telefono,
+.boton-uva,
+.boton-vaca,
+.boton-sandia,
+.boton-xilofono,
+.boton-yoyo,
+.boton-zapato {
+    width: 100%;
+    height: 36px;
+    flex-shrink: 0;
+    border: none;
+    border-top: 1px solid #777777;
+    background: linear-gradient(
+        to bottom,
+        #eeeeee,
+        #d0d0d0
+    );
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+.boton-abeja:hover,
+.boton-ballena:hover,
+.boton-casa:hover,
+.boton-delfin:hover,
+.boton-elefante:hover,
+.boton-foca:hover,
+.boton-gato:hover,
+.boton-helicoptero:hover,
+.boton-isla:hover,
+.boton-jaguar:hover,
+.boton-koala:hover,
+.boton-leon:hover,
+.boton-mula:hover,
+.boton-nube:hover,
+.boton-nandu:hover,
+.boton-oso:hover,
+.boton-pato:hover,
+.boton-queso:hover,
+.boton-raton:hover,
+.boton-sol:hover,
+.boton-telefono:hover,
+.boton-uva:hover,
+.boton-vaca:hover,
+.boton-sandia:hover,
+.boton-xilofono:hover,
+.boton-yoyo:hover,
+.boton-zapato:hover {
+    background: linear-gradient(
+        to bottom,
+        #dddddd,
+        #bcbcbc
+    );
+}
+.boton-abeja:active,
+.boton-ballena:active,
+.boton-casa:active,
+.boton-delfin:active,
+.boton-elefante:active,
+.boton-foca:active,
+.boton-gato:active,
+.boton-helicoptero:active,
+.boton-isla:active,
+.boton-jaguar:active,
+.boton-koala:active,
+.boton-leon:active,
+.boton-mula:active,
+.boton-nube:active,
+.boton-nandu:active,
+.boton-oso:active,
+.boton-pato:active,
+.boton-queso:active,
+.boton-raton:active,
+.boton-sol:active,
+.boton-telefono:active,
+.boton-uva:active,
+.boton-vaca:active,
+.boton-sandia:active,
+.boton-xilofono:active,
+.boton-yoyo:active,
+.boton-zapato:active {
+    background: #c0c0c0;
+}
