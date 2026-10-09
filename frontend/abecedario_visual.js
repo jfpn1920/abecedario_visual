@@ -30,15 +30,15 @@ const audios = {
     "btn-yoyo": "audio_yoyo.mp3",
     "btn-zapato": "audio_zapato.mp3"
 };
+//---------------------------//
+//--|botones_a_interactuar|--//
+//---------------------------//
 const botones = document.querySelectorAll("button[id^='btn-']");
 botones.forEach(function (boton) {
     boton.addEventListener("click", function () {
         const archivoAudio = audios[boton.id];
         if (!archivoAudio) {
-            console.error(
-                "No existe un audio configurado para:",
-                boton.id
-            );
+            console.error("No existe un audio configurado para:", boton.id);
             return;
         }
         console.log("Botón presionado:", boton.id);
@@ -46,17 +46,10 @@ botones.forEach(function (boton) {
         const audio = new Audio(archivoAudio);
         audio.play()
             .then(function () {
-                console.log(
-                    "Audio reproduciéndose:",
-                    archivoAudio
-                );
+                console.log("Audio reproduciéndose:", archivoAudio);
             })
             .catch(function (error) {
-                console.error(
-                    "No se pudo reproducir:",
-                    archivoAudio,
-                    error
-                );
+                console.error("No se pudo reproducir:", archivoAudio, error);
             });
     });
 });
