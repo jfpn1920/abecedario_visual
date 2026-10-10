@@ -56,19 +56,16 @@ botones.forEach(function (boton) {
 //-----------------------------------//
 //--|validacion_formularios_visual|--//
 //-----------------------------------//
-const formularios = document.querySelectorAll(".formulario_palabra");
+const formularios = document.querySelectorAll("form[action='abecedario_visual.php']");
 formularios.forEach(function (formulario) {
     formulario.addEventListener("submit", function (evento) {
-        //------------------------------------//
-        //--|evitar_el_envio_del_formulario|--//
-        //------------------------------------//
-        evento.preventDefault();
         const campoPalabra = formulario.querySelector("input[name='palabra']");
         const campoLetra = formulario.querySelector("input[name='letra']");
         //-------------------------------------//
         //--|verificar_campos_del_formulario|--//
         //-------------------------------------//
         if (!campoPalabra || !campoLetra) {
+            evento.preventDefault();
             alert("No se encontraron los campos necesarios para guardar.");
             return;
         }
@@ -78,7 +75,8 @@ formularios.forEach(function (formulario) {
         const palabra = campoPalabra.value.trim();
         const letra = campoLetra.value.trim();
         if (palabra === "") {
-            alert("Por favor, escribe una palabra.");
+            evento.preventDefault();
+            alert("Por favor, escribe una palabra antes de guardar.");
             campoPalabra.focus();
             return;
         }
@@ -86,18 +84,15 @@ formularios.forEach(function (formulario) {
         //--|validar_las_letras|--//
         //------------------------//
         if (letra === "") {
+            evento.preventDefault();
             alert("No se encontró la letra de esta tarjeta.");
             return;
         }
-        //--------------------------------------//
-        //--|preparar_los_datos_del_simulador|--//
-        //--------------------------------------//
+        //------------------------------------//
+        //--|preparar_los_datos_para_enviar|--//
+        //------------------------------------//
         campoPalabra.value = palabra;
-        console.log("Letra seleccionada:", letra);
-        console.log("Palabra escrita:", palabra);
-        //-------------------------------------//
-        //--|mostrar_mensaje_de_confirmacion|--//
-        //-------------------------------------//
-        alert("El nombre es correcto");
+        console.log("Letra enviada:", letra);
+        console.log("Palabra enviada:", palabra);
     });
 });
